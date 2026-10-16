@@ -262,6 +262,34 @@ template repo which would be. Accepted for now since there's a single
 developer on a single machine; revisit (e.g. move the skill into a
 version-controlled dotfiles repo) if that stops being true.
 
+## Working standards (2026-10)
+
+Brought in line with the refreshed `vibetrunk-new-tool` templates
+([VibeTrunk/kut#329](https://github.com/VibeTrunk/kut/issues/329)). This
+supersedes parts of "Agent safety scaffolding" above:
+
+- `AGENTS.md` is now canonical and `CLAUDE.md` imports it, the same direction
+  as the global agent instructions. The stale "Status so far" text is gone;
+  `README.md` holds the current state.
+- `git commit` and `git push` are no longer auto-allowed in either agent. A
+  standing permission is not the owner's per-change authorization; both now
+  prompt.
+- `gh` allows are read-only subcommands only. The old `gh pr` and `gh run`
+  prefixes in the Codex rules also allowed `gh pr merge` and `gh run delete`.
+- The Codex hook never fired: Codex runs commands as `exec_command`, which the
+  `^Bash$` matcher missed, and the nested-PowerShell launcher was untested.
+  The hook pair now uses KUT's matcher and a plain `node` launcher, fails
+  closed on a malformed payload, and anchors the `rm` pattern so
+  `docker run --rm` and `git rm -r --cached` run.
+- The 14-day package-age hook is replaced by a Dependabot 5-day cooldown.
+  They cover different things: the cooldown delays version updates only,
+  security updates are exempt, and manual installs are reviewed in the PR
+  diff.
+- gitleaks is pinned by image digest, with `actions/checkout@v7`, and `scan`
+  is a required check on `main`.
+- The skill's canonical copy is now `~/.codex/skills/vibetrunk-new-tool/`;
+  the Claude copy is a wrapper.
+
 ## Open items
 
 - **No sitemap.** `@astrojs/sitemap` is not worth a dependency for one indexed
