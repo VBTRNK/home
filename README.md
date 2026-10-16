@@ -29,8 +29,8 @@ export const tools: Tool[] = [
 ```
 
 `status: 'live'` requires a `url`; the type will not compile without one. Live
-tools sort ahead of `coming-soon` ones automatically. Push to `main` and Vercel
-rebuilds.
+tools sort ahead of `coming-soon` ones automatically. Merge the PR into `main`
+and Vercel deploys it.
 
 ## Local development
 
