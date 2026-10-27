@@ -13,7 +13,7 @@ and links every tool. `README.md` has the current state and how to add a tool.
 - Hosting: Vercel project `home`, on the apex `vibetrunk.com` (`www`
   redirects). DNS is at Porkbun.
 - Ecosystem, for context only: every tool has its own repo in the
-  `VibeTrunk` org, its own Vercel project and a subdomain. Tools that need a
+  `VBTRNK` org, its own Vercel project and a subdomain. Tools that need a
   backend share one Supabase project, one Postgres schema per tool. This repo
   knows a tool only by its name, blurb and URL in `src/data/tools.ts`.
 - New tools start from the `vibetrunk-new-tool` skill, not by copying this
