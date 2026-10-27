@@ -171,7 +171,7 @@ while its Supabase backend and Vercel project were brought up. Once it went
 live at `cogitster.vibetrunk.com`, that arrangement stopped matching this
 repo's own stated architecture ("every future tool gets its own repo... own
 Vercel project"), so on 2026-08-16 the code was split out into
-[`VibeTrunk/cogitster`](https://github.com/VibeTrunk/cogitster).
+[`VBTRNK/cogitster`](https://github.com/VBTRNK/cogitster).
 
 The template above was copied in and adapted: Supabase CLI's read-only/dry-run
 subcommands (`supabase migration list`, `supabase db push --dry-run`,
@@ -265,7 +265,7 @@ version-controlled dotfiles repo) if that stops being true.
 ## Working standards (2026-10)
 
 Brought in line with the refreshed `vibetrunk-new-tool` templates
-([VibeTrunk/kut#329](https://github.com/VibeTrunk/kut/issues/329)). This
+([VBTRNK/kut#329](https://github.com/VBTRNK/kut/issues/329)). This
 supersedes parts of "Agent safety scaffolding" above:
 
 - `AGENTS.md` is now canonical and `CLAUDE.md` imports it, the same direction
