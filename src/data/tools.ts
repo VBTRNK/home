@@ -37,6 +37,11 @@ export const tools: Tool[] = [
     url: 'https://flut.vibetrunk.com',
     status: 'live',
   },
+  {
+    name: 'Crime & Crown',
+    blurb: 'Rule the streets. Claim the crown.',
+    status: 'coming-soon',
+  },
 ];
 
 const statusOrder: Record<ToolStatus, number> = {
