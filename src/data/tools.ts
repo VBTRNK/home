@@ -40,7 +40,8 @@ export const tools: Tool[] = [
   {
     name: 'Crime & Crown',
     blurb: 'Rule the streets. Claim the crown.',
-    status: 'coming-soon',
+    url: 'https://cnc.vibetrunk.com',
+    status: 'live',
   },
 ];
 
